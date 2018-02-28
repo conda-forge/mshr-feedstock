@@ -16,12 +16,12 @@ source:
     - boost-thread.patch  # [osx]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
-    - boost-cpp 1.65.*
+    - boost-cpp 1.66.0
     - cmake
     - python
     - fenics {{version}}
@@ -30,7 +30,7 @@ requirements:
     - swig
     - toolchain
   run:
-    - boost-cpp 1.65.*
+    - boost-cpp 1.66.0
     - python
     - fenics {{version}}
     - gmp >=5.0.1,<7
