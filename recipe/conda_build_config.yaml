@@ -1,3 +1,0 @@
-mpfr:
-  # pin mpfr 3 for fenics build with old gcc package
-  - '3'  # [linux and c_compiler == 'toolchain_c']

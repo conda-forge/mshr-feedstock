@@ -31,7 +31,8 @@ requirements:
     - pip
     - fenics {{version}}
     - gmp
-    - mpfr
+    - mpfr  # [not (linux and c_compiler == 'toolchain_c')]
+    - mpfr 3.*  # [linux and c_compiler == 'toolchain_c']
     - pybind11
   run:
     - boost-cpp
