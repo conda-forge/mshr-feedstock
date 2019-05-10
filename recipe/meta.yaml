@@ -1,6 +1,6 @@
 {% set name = "mshr" %}
-{% set version = "2018.1.0" %}
-{% set sha256 = "c2f91300aff792de76b937e7e709076d8ac37043ddb6fe250ebb4229b48ac014" %}
+{% set version = "2019.1.0" %}
+{% set sha256 = "0be8f261e7370404863067badadd230dbd55d54f6ffeba15728f4a9bfc856173" %}
 
 package:
   name: {{ name }}
@@ -29,7 +29,7 @@ requirements:
     - boost-cpp
     - python
     - pip
-    - fenics {{version}}
+    - fenics-dolfin {{version}}
     - gmp
     - mpfr  # [not (linux and c_compiler == 'toolchain_c')]
     - mpfr 3.*  # [linux and c_compiler == 'toolchain_c']
@@ -37,7 +37,7 @@ requirements:
   run:
     - boost-cpp
     - python
-    - fenics {{version}}
+    - fenics-dolfin {{version}}
     - gmp
     - mpfr
 
