@@ -16,7 +16,7 @@ source:
     - boost-thread.patch  # [osx]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py2k or (linux and py == 37 and c_compiler == 'toolchain_c')]
 
 requirements:
