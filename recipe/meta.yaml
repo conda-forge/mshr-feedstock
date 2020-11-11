@@ -16,7 +16,7 @@ source:
     - boost-thread.patch  # [osx]
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win or py2k or (linux and py == 37 and c_compiler == 'toolchain_c')]
 
 requirements:
@@ -29,7 +29,7 @@ requirements:
     - boost-cpp
     - python
     - pip
-    - fenics-dolfin {{version}}
+    - fenics-dolfin {{ version }}
     - gmp
     - mpfr  # [not (linux and c_compiler == 'toolchain_c')]
     - mpfr 3.*  # [linux and c_compiler == 'toolchain_c']
@@ -37,7 +37,7 @@ requirements:
   run:
     - boost-cpp
     - python
-    - fenics-dolfin {{version}}
+    - fenics-dolfin {{ version }}
     - gmp
     - mpfr
 
