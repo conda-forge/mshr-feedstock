@@ -29,7 +29,7 @@ requirements:
     - boost-cpp
     - python
     - pip
-    - fenics-dolfin {{version}}
+    - fenics-dolfin {{ version }}
     - gmp
     - mpfr  # [not (linux and c_compiler == 'toolchain_c')]
     - mpfr 3.*  # [linux and c_compiler == 'toolchain_c']
@@ -37,7 +37,7 @@ requirements:
   run:
     - boost-cpp
     - python
-    - fenics-dolfin {{version}}
+    - fenics-dolfin {{ version }}
     - gmp
     - mpfr
 
