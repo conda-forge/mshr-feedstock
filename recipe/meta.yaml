@@ -35,9 +35,9 @@ requirements:
     - mpfr 3.*  # [linux and c_compiler == 'toolchain_c']
     - pybind11
   run:
-    - boost-cpp
+    - {{ pin_compatible("boost-cpp", exact=True) }}
     - python
-    - fenics-dolfin {{ version }}
+    - {{ pin_compatible("fenics-dolfin", exact=True) }}
     - gmp
     - mpfr
 
