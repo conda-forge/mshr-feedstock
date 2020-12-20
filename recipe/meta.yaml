@@ -26,7 +26,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - boost-cpp
+    - boost-cpp >=1.74
     - python
     - pip
     - fenics-dolfin {{ version }}
