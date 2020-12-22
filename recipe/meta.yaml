@@ -29,8 +29,7 @@ requirements:
     - boost-cpp
     - python
     - pip
-    - fenics-dolfin =2019.1.0=*_16
-    - fenics-dijitso =2019.1.0=*_16
+    - fenics-dolfin {{ version }}
     - gmp
     - mpfr  # [not (linux and c_compiler == 'toolchain_c')]
     - mpfr 3.*  # [linux and c_compiler == 'toolchain_c']
