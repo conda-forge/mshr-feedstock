@@ -44,6 +44,8 @@ requirements:
     - mpfr
 
 test:
+  source_files:
+    - test
   commands:
     - export OMPI_MCA_plm=isolated
     - export OMPI_MCA_rmaps_base_oversubscribe=yes
