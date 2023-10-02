@@ -16,7 +16,7 @@ source:
     - boost-thread.patch  # [osx]
 
 build:
-  number: 7
+  number: 8
   skip: true  # [win or py2k or (linux and py == 37 and c_compiler == 'toolchain_c')]
 
 requirements:
@@ -27,19 +27,19 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - boost-cpp
+    - libboost-devel
     - python
     - pip
     - fenics-dolfin {{ version }}
     - {{ mpi }}
     - gmp
-    - mpfr  # [not (linux and c_compiler == 'toolchain_c')]
-    - mpfr 3.*  # [linux and c_compiler == 'toolchain_c']
+    - mpfr
     - pybind11
   run:
-    - {{ pin_compatible("boost-cpp", max_pin='x.x.x') }}
     - python
-    - {{ pin_compatible("fenics-dolfin", max_pin='x.x.x') }}
+    - fenics-dolfin
+    # should be replaced by a run-export for `fenics-dolfin` --> `fenics-libdolfin`
+    - {{ pin_compatible("fenics-libdolfin", max_pin='x.x.x') }}
     - gmp
     - mpfr
 
