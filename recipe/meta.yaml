@@ -33,12 +33,12 @@ requirements:
     - fenics-dolfin {{ version }}
     - {{ mpi }}
     - gmp
-    - mpfr  # [not (linux and c_compiler == 'toolchain_c')]
-    - mpfr 3.*  # [linux and c_compiler == 'toolchain_c']
+    - mpfr
     - pybind11
   run:
     - python
-    - {{ pin_compatible("fenics-dolfin", max_pin='x.x.x') }}
+    # should be replaced by a run-export for `fenics-dolfin` --> `fenics-libdolfin`
+    - {{ pin_compatible("fenics-libdolfin", max_pin='x.x.x') }}
     - gmp
     - mpfr
 
