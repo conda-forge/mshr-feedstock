@@ -37,6 +37,7 @@ requirements:
     - pybind11
   run:
     - python
+    - fenics-dolfin
     # should be replaced by a run-export for `fenics-dolfin` --> `fenics-libdolfin`
     - {{ pin_compatible("fenics-libdolfin", max_pin='x.x.x') }}
     - gmp
