@@ -13,10 +13,10 @@ source:
   patches:
     # Link boost_thread on macOS. Doesn't appear to be needed
     # on recent versions (10.12), but seems needed on Travis (Xcode 6.4, currently).
-    - boost-thread.patch  # [osx]
+    - libboost-python-devel-thread.patch  # [osx]
 
 build:
-  number: 7
+  number: 8
   skip: true  # [win or py2k or (linux and py == 37 and c_compiler == 'toolchain_c')]
 
 requirements:
@@ -27,7 +27,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - boost-cpp
+    - libboost-devel
     - python
     - pip
     - fenics-dolfin {{ version }}
@@ -37,7 +37,6 @@ requirements:
     - mpfr 3.*  # [linux and c_compiler == 'toolchain_c']
     - pybind11
   run:
-    - {{ pin_compatible("boost-cpp", max_pin='x.x.x') }}
     - python
     - {{ pin_compatible("fenics-dolfin", max_pin='x.x.x') }}
     - gmp
