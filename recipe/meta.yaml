@@ -17,7 +17,7 @@ source:
 
 build:
   number: 11
-  skip: true  # [win or py2k or (linux and py == 37 and c_compiler == 'toolchain_c')]
+  skip: true  # [win]
 
 requirements:
   build:
